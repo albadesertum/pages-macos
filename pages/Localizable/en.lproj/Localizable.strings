@@ -1,0 +1,27 @@
+/* 
+ Localizable.strings
+ pages
+ 
+ Created by Vladimir Psyukalov on 27.01.2020.
+ Copyright © 2020 ZUZEX LLC. All rights reserved.
+ */
+
+"l_empty" = "Empty";
+
+"l_refresh" = "Refresh";
+
+"l_name" = "Name";
+"l_url" = "URL";
+
+"l_is_fixated" = "Is fixated";
+"l_countdown" = "Countdown";
+
+"l_width" = "Width";
+"l_height" = "Height";
+
+"l_autorun" = "Autorun";
+
+"l_info_title" = "Info";
+"l_info_message" = "zPages - a web page in your status bar";
+
+"l_close" = "Close";

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PageViewController" customModule="zPages" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="sMS-Tv-WgA" id="L3k-fG-ja7"/>
+                <outlet property="bottomConstraint" destination="MHm-M6-Ihm" id="wUK-TL-Wzm"/>
+                <outlet property="box" destination="MJm-rU-gPG" id="exN-ts-fbt"/>
+                <outlet property="errorTextField" destination="8x9-B9-2Du" id="he7-8k-JRv"/>
+                <outlet property="forwardButton" destination="cSP-Ib-aev" id="x2t-1X-EnB"/>
+                <outlet property="heightConstraint" destination="Vzh-PS-jN7" id="LCZ-PJ-RMa"/>
+                <outlet property="progressIndicator" destination="G1N-7M-pJL" id="bj1-Id-qPS"/>
+                <outlet property="refreshButtonA" destination="hvR-j5-yKl" id="yRw-FM-UJ1"/>
+                <outlet property="refreshButtonB" destination="O2O-Md-KKX" id="Bpo-w7-Sy5"/>
+                <outlet property="stackView" destination="SZH-uI-YsP" id="qgp-9q-oES"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="webView" destination="5Aq-jw-XnF" id="MFB-sP-xGS"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Aq-jw-XnF">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                    <connections>
+                        <outlet property="UIDelegate" destination="-2" id="HGz-ar-lRT"/>
+                        <outlet property="navigationDelegate" destination="-2" id="C8r-ks-fuV"/>
+                    </connections>
+                </wkWebView>
+                <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZH-uI-YsP">
+                    <rect key="frame" x="160" y="128" width="81" height="44"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="8x9-B9-2Du">
+                            <rect key="frame" x="36" y="29" width="8" height="15"/>
+                            <textFieldCell key="cell" selectable="YES" alignment="center" id="XM2-bA-Y3h">
+                                <font key="font" metaFont="label" size="12"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hvR-j5-yKl">
+                            <rect key="frame" x="-6" y="-7" width="93" height="32"/>
+                            <buttonCell key="cell" type="push" title="l_refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3XP-s4-mq1">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="refreshButtonAction:" target="-2" id="iOz-pP-CH6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <progressIndicator wantsLayer="YES" maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-7M-pJL" customClass="ProgressIndicator" customModule="zPages" customModuleProvider="target">
+                    <rect key="frame" x="-8" y="-9" width="416" height="20"/>
+                </progressIndicator>
+                <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="24" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="MJm-rU-gPG">
+                    <rect key="frame" x="144" y="16" width="112" height="48"/>
+                    <view key="contentView" id="kHH-XR-8bm">
+                        <rect key="frame" x="0.0" y="0.0" width="112" height="48"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khc-ZV-Qfj">
+                                <rect key="frame" x="8" y="8" width="96" height="32"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sMS-Tv-WgA">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="7Ax-Mo-Dhq">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" target="-2" id="PZ8-H5-9OW"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O2O-Md-KKX">
+                                        <rect key="frame" x="32" y="0.0" width="32" height="32"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="refresh_button" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="Jqh-1I-Wio">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="refreshButtonAction:" target="-2" id="n1e-KJ-0Yh"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cSP-Ib-aev">
+                                        <rect key="frame" x="64" y="0.0" width="32" height="32"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="forward_button" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="Yxs-90-jlJ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="forwardButtonAction:" target="-2" id="hPd-aC-KYJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="khc-ZV-Qfj" firstAttribute="centerY" secondItem="kHH-XR-8bm" secondAttribute="centerY" id="6vM-Vl-Hp0"/>
+                            <constraint firstItem="khc-ZV-Qfj" firstAttribute="leading" secondItem="kHH-XR-8bm" secondAttribute="leading" constant="8" id="e87-7H-uBJ"/>
+                            <constraint firstItem="khc-ZV-Qfj" firstAttribute="centerX" secondItem="kHH-XR-8bm" secondAttribute="centerX" id="szS-PS-jnz"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Vzh-PS-jN7"/>
+                    </constraints>
+                    <color key="fillColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="SZH-uI-YsP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="32" id="1Yt-95-WHI"/>
+                <constraint firstItem="MJm-rU-gPG" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" priority="750" id="4G4-ws-a2q"/>
+                <constraint firstItem="MJm-rU-gPG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="16" id="89A-e5-mfq"/>
+                <constraint firstItem="SZH-uI-YsP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="32" id="Dts-JT-3ER"/>
+                <constraint firstItem="5Aq-jw-XnF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="GVg-el-Yvf"/>
+                <constraint firstAttribute="bottom" secondItem="G1N-7M-pJL" secondAttribute="bottom" constant="-8" id="Hsa-ao-fJz"/>
+                <constraint firstAttribute="bottom" secondItem="MJm-rU-gPG" secondAttribute="bottom" constant="16" id="MHm-M6-Ihm"/>
+                <constraint firstItem="G1N-7M-pJL" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="-8" id="Mmm-mx-3rY"/>
+                <constraint firstAttribute="bottom" secondItem="5Aq-jw-XnF" secondAttribute="bottom" id="Yr0-Qg-H0S"/>
+                <constraint firstItem="5Aq-jw-XnF" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Zme-ph-FXx"/>
+                <constraint firstItem="SZH-uI-YsP" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="dVW-mT-hYw"/>
+                <constraint firstAttribute="trailing" secondItem="5Aq-jw-XnF" secondAttribute="trailing" id="ett-Ma-dGo"/>
+                <constraint firstItem="SZH-uI-YsP" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="inX-L3-SBj"/>
+                <constraint firstItem="G1N-7M-pJL" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="xeB-q0-mvY"/>
+            </constraints>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="back_button" width="32" height="32"/>
+        <image name="forward_button" width="32" height="32"/>
+        <image name="refresh_button" width="32" height="32"/>
+    </resources>
+</document>
