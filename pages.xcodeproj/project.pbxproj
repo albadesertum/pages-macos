@@ -108,8 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7F086CC23F69F2200865179 /* WebKit.framework in Frameworks */,
 				C7D59ACB23DEC5D8004B6736 /* ServiceManagement.framework in Frameworks */,
+				C7F086CC23F69F2200865179 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,13 +380,12 @@
 			files = (
 				C7DBF40B23D99E900020E703 /* AppDelegate.swift in Sources */,
 				C7223F2E23E9BF350019C6B2 /* Copyable.swift in Sources */,
-				C7D74E9023E478DC00D74AD3 /* NSAlert+Instance.swift in Sources */,
-				C75B27C723F408D500BDF9DF /* SettingsViewController.swift in Sources */,
-				C758C97223DB29EF008DFBCA /* NSStatusItem+Instance.swift in Sources */,
 				C75B27CC23F420C700BDF9DF /* HighlightedItem.swift in Sources */,
+				C75B27CA23F4141000BDF9DF /* ProgressIndicator.swift in Sources */,
+				C7D74E9023E478DC00D74AD3 /* NSAlert+Instance.swift in Sources */,
+				C758C97223DB29EF008DFBCA /* NSStatusItem+Instance.swift in Sources */,
 				C76064FE23D9C86A001B4224 /* String+Localize.swift in Sources */,
 				C7D74E9223E47A6200D74AD3 /* NSAlert+Helper.swift in Sources */,
-				C75B27CA23F4141000BDF9DF /* ProgressIndicator.swift in Sources */,
 				C758C97623DB2D21008DFBCA /* Item.swift in Sources */,
 				C7DE899923F15489000D0024 /* TrackingAreaView.swift in Sources */,
 				C7C5164123EAE18A006D84D4 /* ViewController.swift in Sources */,
@@ -398,6 +397,7 @@
 				C758C96C23DB1B5C008DFBCA /* PagesService.swift in Sources */,
 				C758C97023DB2575008DFBCA /* SettingsService.swift in Sources */,
 				C758C97B23DB37AB008DFBCA /* PageViewController.swift in Sources */,
+				C75B27C723F408D500BDF9DF /* SettingsViewController.swift in Sources */,
 				C7D59ACF23DEC787004B6736 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
